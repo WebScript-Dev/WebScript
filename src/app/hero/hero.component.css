@@ -1,0 +1,145 @@
+.ws-hero {
+    height: 600px;
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-columns: 1fr;
+    grid-template-areas: 
+        'one two';
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.ws-hero::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 150px;
+    width: 125px;
+    border-left: 4px solid var(--primary-color);
+    border-top: 4px solid var(--primary-color);
+    border-top-left-radius: 10px;
+}
+
+.ws-hero::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    height: 150px;
+    width: 125px;
+    border-right: 4px solid var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+    border-bottom-right-radius: 10px;
+}
+
+.ws-hero-cell.new {
+    grid-area: one;
+    padding: 20px 0px 20px 20px;
+}
+
+.ws-hero-cell.title {
+    grid-area: two;
+    padding: 20px 20px 0px 0px;
+}
+
+.ws-title-card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ws-title-card-information {
+    flex-grow: 1;
+    width: 100%;
+    margin-bottom: 25px;
+    /* background: url('../assets/code.JPG'); */
+    position: relative;
+}
+
+.ws-title-card-information-header {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 15px 25px 25px;
+    background: var(--background-secondary);
+    font-size: 24px;
+    font-family: 'Share Tech Mono';
+    color: var(--primary-color);
+}
+
+.ws-title-card-banner {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 0px 25px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.ws-title-card-banner.secondary {
+    background: var(--secondary-color);
+}
+
+.ws-title-card-banner.tertiary {
+    background: var(--tertiary-color);
+    margin-bottom: 21px;
+}
+
+.ws-title-card-banner {
+    cursor: pointer;
+}
+
+.ws-title-card-banner-header {
+    font-size: 18px;
+    font-family: 'Roboto';
+}
+
+.ws-hero-article {
+    height: 100px;
+    background: var(--background-secondary);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    overflow: hidden;
+}
+
+.ws-hero-article:last-child {
+    margin-bottom: 0px;
+}
+
+.ws-hero-article:hover {
+    cursor: pointer;
+}
+
+.ws-hero-article-title {
+    flex-grow: 1;
+    font-size: 18px;
+    padding: 0px 25px;
+    font-family: 'Share Tech Mono';
+    color: var(--primary-color);
+}
+
+.ws-hero-article-framework {
+    position: relative;
+    width: 40px;
+    padding-left: 10px;
+    height: 100%;
+    text-align: center;
+    writing-mode: vertical-lr;
+    font-family: 'Roboto';
+    color: var(--background-primary);
+    background: var(--tertiary-color);
+}
+
+.ws-framework-label {
+    width: 25px;
+}
